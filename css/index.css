@@ -51,7 +51,8 @@
 .topmenu .login {
     position: absolute;
     top: 0;
-    right: 0
+    right: 0;
+    color: #000;
 }
 
 .topmenu .login a {
