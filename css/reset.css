@@ -28,3 +28,28 @@ header , footer , section , article , aside , nav , main, figure{
  }
 
 
+ .skip a {
+     display: block;
+     background: #000;
+     color: #fff;
+     text-align: center;
+     width: 1px;
+     height: 1px;
+     overflow: hidden;
+     position: absolute;
+     top: -100px;
+ }
+ .skip a:focus {
+     /* focus는 tab키를 눌러야지 반응을한다 */
+    width: 100%;
+    height: auto;
+    padding: 10px 0px;
+    /* position: static; */
+    /* 포지션속성을 취소한다 */
+    position: fixed;
+    top: 0;
+    z-index: 999999;
+ }
+
+
+
