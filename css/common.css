@@ -1,0 +1,248 @@
+@charset "utf-8";
+@import "reset.css";
+
+.row {
+    max-width: 1167px;
+    margin: 0 auto;
+}
+
+.skip a {
+    display: block;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    top: -100px;
+}
+
+.skip a:focus {
+    /* focus는 tab키를 눌러야지 반응을한다 */
+    width: 100%;
+    height: auto;
+    padding: 10px 0px;
+    /* position: static; */
+    /* 포지션속성을 취소한다 */
+    position: fixed;
+    top: 0;
+    z-index: 999999;
+}
+
+#header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: 9999;
+    box-shadow: 0px 2px 2px #eee;
+}
+
+/* 반응형의 기본은 max-width로 넓이를 먼저 잡아주고시작한다 이제부터 넓이를 잡을때는 max-width 안에있는 박스들은 전부다 %로 넓이를 지정한다 */
+
+
+
+
+.topmenu .row {
+    position: relative
+}
+
+.topmenu {
+    background: #f76f6f;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 10px 0;
+    letter-spacing: -0.5px;
+}
+
+.topmenu a {
+    transition: all 0.5s;
+}
+
+.topmenu a:hover {
+    color: rgb(255, 255, 255, 1)
+}
+
+.topmenu .sns a {
+    padding-right: 10px;
+    font-size: 12.2px;
+}
+
+.topmenu .sns a:first-child span {
+    font-size: 11px
+}
+
+.topmenu .login {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #000;
+}
+
+.topmenu .login a {
+    padding-left: 10px;
+    font-size: 11px
+}
+
+.logoNav {
+    position: relative;
+    height: 76px;
+}
+
+.logoNav h1 {
+    color: #ffae3d;
+    font-size: 26.25px;
+    line-height: 76px;
+    font-weight: bold;
+}
+
+.logoNav .nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.logoNav .nav .depth1>li {
+    /* float: left; */
+    display: inline-block;
+    /* 서브메뉴가있는 1단계메뉴들은 display인라인으로는 안된다 */
+    font-size: 15.75px;
+    line-height: 76px;
+    padding-left: 30px;
+    font-weight: bold;
+    transition: all 0.5s;
+    position: relative;
+}
+
+.logoNav .nav .depth1>li:hover {
+    color: #ffd23c;
+}
+
+.logoNav .nav .depth1>li:first-child {
+    color: #ffd23c
+}
+
+.logoNav .nav .depth1>li>a:after {
+    content: '\f078';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #ddd;
+    padding-left: 10px;
+}
+
+.logoNav .nav .depth1>li:first-child>a:after,
+.logoNav .nav .depth1>li:nth-child(5)>a:after {
+    visibility: hidden;
+}
+
+
+
+.logoNav .nav .depth2 {
+    position: absolute;
+    top: 85%;
+    left: 0;
+    /* 탑100 레프트0 서브메뉴들을 바로밑으로 */
+    width: 168px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px #ddd;
+    /* 4방향에 그림자를 줄때는 방향수치는0으로고정하고 블러값을 주어서 그림자효과를준다 */
+    display: none;
+}
+
+.logoNav .nav .depth2:before {
+    content: '';
+    position: absolute;
+    bottom: 99%;
+    left: 40px;
+    border-bottom: 100%;
+    border-bottom: 10px solid #fff;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
+
+.logoNav .nav .depth1>li:hover .depth2 {
+    display: block;
+    /* 디스플레이 블락은 디스플레이 논으로 설정되있는것들을 보이게한다 */
+}
+
+
+.logoNav .nav .depth2>li {
+    line-height: 38px;
+    color: #ffae3d;
+    padding: 0 15px;
+    font-size: 16px;
+}
+
+
+/* 여기까지가 헤드 */
+
+
+#footer {
+    text-align: center;
+    font-size: 12.25px;
+}
+
+.footerMenu {
+    background: #eee;
+    color: #333;
+    padding: 10px 0;
+}
+
+.footerMenu a {
+    padding-left:10px;
+}
+
+.footerMenu a:before {
+    content: '|';
+    padding-right: 11px;
+    font-size: 6px;
+    position: relative;
+    /* 포지션렐러티브는 기준이 필요없는속성이다 기존에 있는 자신의 위치에서 움직이는 속성값이다 */
+    top:-1px
+}
+
+.footerMenu a:first-child:before {
+    /* 퍼스트차일드와 비포의 순서는 영향을 받으므로 생각하면서 써야한다 */
+    display: none;
+}
+
+.comInfo {
+    background: #222;
+    color: rgba(255,255,255,0.5);
+    padding: 40px 0;
+}
+
+.comInfo .sns a {
+    display: inline-block;
+    font-size: 17px;
+    padding:0 10px 10px ;
+}
+
+.comInfo .info span {
+    letter-spacing: -1px;
+    padding-left: 5px;
+    position: relative;
+    top: -1px;
+}
+
+.comInfo .info span:before {
+    content: '|';
+    padding-right: 6px;
+    font-size: 6px;
+}
+
+.comInfo .info span:first-child:before {
+    display: none;
+}
+
+.copyright {
+    background: #0a0a0a;
+    padding: 10px 0px;
+    font-size: 10.5px;
+    color: #333;
+}
+
+
+/* 여기까지가 푸터 */
