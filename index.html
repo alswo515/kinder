@@ -5,11 +5,25 @@
 <title>새싹유치원</title>
 <link rel="stylesheet" href="css/index.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<![endif]-->
+<!-- 조건주석문 -->
+<!--[if lt IE 9]-->
+<!--[endif]-->
+<!-- cc:ie 에밋조건확장문 단축기 -->
+
+
+
+<!--[if lte IE 8 ]>
+    lt는 >
+    lte는 <
+<![endif]-->
 </head>
 
 <body>
-
-    <div id="header">
+<!-- 시멘틱태그를사용하면 검색엔진에서 상위로 노출해준다 하지만 브라우저 호환성은 많이 떨어진다 -->
+    <header id="header">
         <div class="topmenu">
             <div class="row">
                 <div class="sns">
@@ -32,7 +46,7 @@
             <h1>
                 <a href="#">CompanyName</a>
             </h1>
-            <div class="nav">
+            <nav class="nav">
                 <ul class="depth1 cf">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">유치원소개</a>
@@ -153,14 +167,14 @@
                         </ul>
                     </li>
                 </ul>
-            </div>
+            </nav>
         </div>
-    </div>
+    </header>
 
-    <div id="section">
+    <section id="section">
 
-        <div class="slideOuter">
-            <div class="slideInner">
+        <article class="slideOuter">
+            <article class="slideInner">
                 <div>
                     <div class="text">
                         <p>새싹유치원1</p>
@@ -181,16 +195,16 @@
                         </p>
                     </div>
                 </div>
-            </div>
+            </article>
             <div class="arr prev"><i class="fas fa-chevron-left"></i></div>
             <div class="arr next"><i class="fas fa-chevron-right"></i></div>
             <div class="dotBox">
                 <a href="#" class="active"><span class="blind">1</span></a>
                 <a href="#"><span class="blind">2</span></a>
             </div>
-        </div>
+        </article>
 
-        <div class="act row">
+        <article class="act row">
             <div class="title">
                 <h2>유치원활동</h2>
                 <p><strong>앞선 정보와 신뢰를 최우선</strong> 가치로 삼고 교육과정을 개발하고 있습니다</p>
@@ -225,8 +239,8 @@
                     </div>
                 </li>
             </ul>
-        </div>
-        <div class="curriInfo row">
+        </article>
+        <article class="curriInfo row">
             <div class="title">
                 <h2>교육과정안내</h2>
                 <p><strong>앞선 정보와 신뢰를 최우선</strong> 가치로 삼고 교육과정을 개발하고 있습니다</p>
@@ -286,8 +300,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="review">
+        </article>
+        <article class="review">
             <div class="row">
                 <div class="title">
                     <h2>추천후기</h2>
@@ -359,15 +373,15 @@
                     </li>
                 </ul>
             </div>
-        </div>
-        <div class="bestChoice">
+        </article>
+        <article class="bestChoice">
             <div class="overlay">
                 <div class="row">
                     <p>Your Best Choice! 가족과 사회와 함께 성장하는 교육기관이 되겠습니다</p>
                 </div>
             </div>
-        </div>
-        <div class="csNnotice">
+        </article>
+        <article class="csNnotice">
             <div class="row cf">
                 <div>
                     <h2>연락처안내</h2>
@@ -408,10 +422,10 @@
                     <a class="more" href="#">더보기</a>
                 </div>
             </div>
-        </div>
-    </div>
+        </article>
+    </section>
 
-    <div id="footer">
+    <footer id="footer">
         <div class="footerMenu">
             <div class="row">
                 <a href="#">이용약관</a>
@@ -452,7 +466,7 @@
                 Copyright &copy; CompanyName Corp. All Rights Reserved.
             </div>
         </div>
-    </div>
+    </footer>
 
 
 </body>
