@@ -21,11 +21,11 @@
 
 <body>
 
-<div class="skip">
-    <a href="#section">본문 바로가기</a>
-</div>
+    <div class="skip">
+        <a href="#section">본문 바로가기</a>
+    </div>
 
-<!-- 시멘틱태그를사용하면 검색엔진에서 상위로 노출해준다 하지만 브라우저 호환성은 많이 떨어진다 -->
+    <!-- 시멘틱태그를사용하면 검색엔진에서 상위로 노출해준다 하지만 브라우저 호환성은 많이 떨어진다 -->
     <header id="header">
         <div class="topmenu">
             <div class="row">
@@ -54,71 +54,71 @@
                     <li><a href="#">Home</a></li>
                     <li><a href="#">유치원소개</a>
                         <ul class="depth2">
-                        <li>
-                            <a href="#">
-                            원장인사말1      
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                            원장인사말2     
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                            연혁      
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                            비전      
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                            경여이념      
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                            위치안내1      
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                            위치안내2      
-                            </a>
-                        </li>
+                            <li>
+                                <a href="#">
+                                    원장인사말1
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    원장인사말2
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    연혁
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    비전
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    경영이념
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    위치안내1
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    위치안내2
+                                </a>
+                            </li>
                         </ul>
                     </li>
                     <li><a href="#">교육과정안내</a>
-                    <ul class="depth2">
-                        <li>
-                            <a href="#">
-                            교육과정1
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                            교육과정2
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                            교육과정3
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                            교육과정4
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                            주요거래처
-                            </a>
-                        </li>
-                    </ul>
+                        <ul class="depth2">
+                            <li>
+                                <a href="#">
+                                    교육과정1
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    교육과정2
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    교육과정3
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    교육과정4
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    주요거래처
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                     <li><a href="#">유치원활동</a>
                         <ul class="depth2">
@@ -174,8 +174,79 @@
         </div>
     </header>
 
-    <section id="joinPage">
-        회원가입페이지
+    <section id="join_Page">
+        <div class="join_box row">
+            <h2>회원가입</h2>
+            <form action="#" method="post" class="join_form">
+                <!-- action 에는 데이터 베이스 주소를 적어준다method=get방식은 사용자가 입력한정보가 다른사람도 볼수있도록 노출이돤다 -->
+                <fieldset>
+                    <!-- 폼테그의 그룹화테그 -->
+                    <legend>
+                        회원가입양식
+                        <!-- legend테그는 form테그의 제목테그 -->
+                    </legend>
+                    <p class="info_pilsoo pilsoo_item">필수입력</p>
+                    <!-- 레이블테그를 클릭했을때 인풋상자로 연결시킬려면 id로만 연결이 된다 클래스는 연결안됨 -->
+                    <ul class="info_list">
+                        <li>
+                            <label for="name_lbl" class="tit_lbl pilsoo_item">
+                                작성자명
+                            </label>
+                            <div class="info_content">
+                                <input class="w320 " type="text" id="name_lbl" placeholder="이름을 입력해 주세요.">
+                            </div>
+                        </li>
+                        <li>
+                            <label for="password_lbl" class="tit_lbl pilsoo_item">
+                                비밀번호
+                            </label>
+                            <div class="info_content">
+                                <input class="w320 " type="password" id="password_lbl" placeholder="비밀번호를 입력해주세요">
+                            </div>
+                        </li>
+                        <li>
+                            <label for="passwordok_lbl" class="tit_lbl pilsoo_item">
+                                비밀번호확인
+                            </label>
+                            <div class="info_content">
+                                <input class="w320 " type="password" id="passwordok_lbl"
+                                    placeholder="         비밀번호를 다시 한번 입력해주세요">
+                            </div>
+                        </li>
+                        <li>
+                            <label for="phone_lbl" class="tit_lbl pilsoo_item">
+                                연락처
+                            </label>
+                            <div class="info_content">
+                                <input class="w320 " type="text" id="phone_lbl"
+                                    placeholder='          휴대폰번호 "-" 없이 숫자만 입력해주세요'>
+                            </div>
+                        </li>
+                        <li>
+                            <label for="email_lbl" class="tit_lbl pilsoo_item">
+                                이메일
+                            </label>
+                            <div class="info_content">
+                                <input class="w160 " type="text" id="email_lbl">
+
+                                <span>@</span>
+
+                                <input class="w160 " type="text" id="domain" disabled>
+                                <select class="w160" id="email_choice">
+                                    <option value="nochoice">-이메일선택-</option>
+                                    <option value="naver.com">-네이버-</option>
+                                    <option value="daum.com">-다음-</option>
+                                    <option value="self">-직접입력-</option>
+                                </select>
+                            </div>
+                        </li>
+                    </ul>
+                </fieldset>
+
+            </form>
+
+
+        </div>
     </section>
 
     <footer id="footer">

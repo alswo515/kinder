@@ -52,4 +52,10 @@ header , footer , section , article , aside , nav , main, figure{
  }
 
 
+ fieldset{
+     border:none
+ }
+ legend{
+     display:none
+ }
 
