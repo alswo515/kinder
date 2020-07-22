@@ -130,9 +130,6 @@
 .join_form .btn input[type=submit]{
     background: red;
 }
-.join_form .btn input[type=reset]{
-
-}
 
 
 .join_form .w70p{
@@ -151,4 +148,7 @@
     width: 160px;
 }
 
+.join_form .w80 {
+    width: 80px;
+}
 
