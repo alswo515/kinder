@@ -13,6 +13,10 @@
     font-size: 30px;
 }
 
+::placeholder{
+    color: #f00;
+}
+
 .join_form .info_pilsoo {
     padding: 0 0 10px 20px;
     border-bottom: 2px solid #000;
@@ -65,6 +69,7 @@
 }
 
 .join_form .info_content select,
+.join_form .info_content input[type=date],
 .join_form .info_content input[type=text],
 .join_form .info_content input[type=password] {
     height: 45px;
@@ -76,14 +81,65 @@
 .join_form .info_content span {
     line-height: 45px;
 }
-.join_form .w70p{
+
+.join_form .info_content button {
+    height: 45px;
+    width: 80px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.join_form .info_content button:hover {
+    cursor:pointer;
+    /* 커서모양바꾸는 css속성 */
+    background: #ddd;
+}
+
+.join_form .gender_area label,
+.join_form .hobby_area label{
+    line-height: 45px;
+    padding: 0 15px 0 0;
+}
+
+.join_form .info_content textarea{
     width: 70%;
+    height: 245px;
+    font-size: 15px;
+    letter-spacing: -1px;
+    color: #444;
+    padding: 10px;
+    line-height: 1.5;
+    resize: none;
+    /* 텍스트에어리어는 사용자가 마음대로 크기를 조절할수있기 때문에 resize속성을 넣어서 못하게 할수있다  */
+}
+
+.join_form .btn{
+    margin-top: 20px;
+    text-align: center;
+}
+.join_form .btn input{
+    width: 80px;
+    height: 40px;
+    background: #000;
+    color: #fff;
+    border:none;
+    border-radius:5px;
+    margin: 0 20px;
+}
+
+.join_form .btn input[type=submit]{
+    background: red;
+}
+.join_form .btn input[type=reset]{
+
 }
 
 
-
-.join_form .mtb3 {
-    margin: 3px 0;
+.join_form .w70p{
+    width: 70%;
+}
+.join_form .mb3 {
+    margin-bottom:5px;
 }
 
 
@@ -94,3 +150,5 @@
 .join_form .w160 {
     width: 160px;
 }
+
+
