@@ -34,7 +34,6 @@
 
 .join_form .info_list {
     padding: 10px 0;
-    ;
     border-bottom: 1px solid #ccc;
 }
 
@@ -77,7 +76,15 @@
 .join_form .info_content span {
     line-height: 45px;
 }
+.join_form .w70p{
+    width: 70%;
+}
 
+
+
+.join_form .mtb3 {
+    margin: 3px 0;
+}
 
 
 .join_form .w320 {
