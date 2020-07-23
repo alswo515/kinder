@@ -63,7 +63,13 @@
 
 #login_page .login_form .check {
     margin: 20px 370px;
-    text-align: left;
+    text-align: center;
+}
+
+button, input[type=submit], input[type=reset]{
+    border: none;
+    background: none;
+    cursor: pointer;
 }
 
 
