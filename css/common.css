@@ -64,6 +64,11 @@
     color: rgb(255, 255, 255, 1)
 }
 
+.topmenu .sns  {
+    position: relative;
+}
+
+
 .topmenu .sns a {
     padding-right: 10px;
     font-size: 12.2px;
@@ -71,6 +76,13 @@
 
 .topmenu .sns a:first-child span {
     font-size: 11px
+}
+
+.topmenu .sns .search_box {
+    position: absolute;
+    top:0px;
+    left: 18%;
+    border: none;
 }
 
 .topmenu .login {
