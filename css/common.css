@@ -65,7 +65,7 @@
 }
 
 .topmenu .sns  {
-    position: relative;
+    /* position: relative; */
 }
 
 
@@ -81,9 +81,40 @@
 .topmenu .sns .search_box {
     position: absolute;
     top:0px;
-    left: 18%;
+    left: 50%;
+    transform: translate(-50%);
     border: none;
 }
+
+.topmenu .sns .search_box fieldset {
+    border-bottom:2px solid #fff;
+    height: 25PX;
+}
+
+.topmenu .search_box ::placeholder{
+    color: #fff;
+    padding-left: 10px;
+}
+
+.topmenu .sns .search_box fieldset input {
+    border: none;
+    padding-left: 2px;
+    background: none;
+    color: #fff;
+    outline: none;
+}
+
+.topmenu .sns .search_box fieldset button {
+    background: none;
+    color: #fff;
+    border: none;
+    height: 21px;
+    vertical-align: top;
+    padding: 0px 0px;
+    float: right;
+}
+
+
 
 .topmenu .login {
     position: absolute;
