@@ -1,6 +1,7 @@
 @charset "utf-8";
 @import "reset.css";
 
+
 .row {
     max-width: 1167px;
     margin: 0 auto;
@@ -64,7 +65,7 @@
     color: rgb(255, 255, 255, 1)
 }
 
-.topmenu .sns  {
+.topmenu .sns {
     /* position: relative; */
 }
 
@@ -80,20 +81,20 @@
 
 .topmenu .sns .search_box {
     position: absolute;
-    top:0px;
+    top: 0px;
     left: 50%;
     transform: translate(-50%);
     border: none;
 }
 
 .topmenu .sns .search_box fieldset {
-    border-bottom:2px solid #fff;
-    height: 25PX;
+    border-bottom: 2px solid #fff;
+    height: 25px;
 }
 
-.topmenu .search_box ::placeholder{
+.topmenu .search_box ::placeholder {
     color: #fff;
-    padding-left: 10px;
+    text-align: center;
 }
 
 .topmenu .sns .search_box fieldset input {
@@ -234,7 +235,7 @@
 }
 
 .footerMenu a {
-    padding-left:10px;
+    padding-left: 10px;
 }
 
 .footerMenu a:before {
@@ -243,7 +244,7 @@
     font-size: 6px;
     position: relative;
     /* 포지션렐러티브는 기준이 필요없는속성이다 기존에 있는 자신의 위치에서 움직이는 속성값이다 */
-    top:-1px
+    top: -1px
 }
 
 .footerMenu a:first-child:before {
@@ -253,14 +254,14 @@
 
 .comInfo {
     background: #222;
-    color: rgba(255,255,255,0.5);
+    color: rgba(255, 255, 255, 0.5);
     padding: 40px 0;
 }
 
 .comInfo .sns a {
     display: inline-block;
     font-size: 17px;
-    padding:0 10px 10px ;
+    padding: 0 10px 10px;
 }
 
 .comInfo .info span {
@@ -289,3 +290,88 @@
 
 
 /* 여기까지가 푸터 */
+
+
+
+@media only screen and (max-width:1170px) {
+    .row {
+        padding: 0 10px;
+    }
+
+    .topmenu .login {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        color: #000;
+    }
+
+    .logoNav .nav .depth1>li {
+        /* float: left; */
+        display: inline-block;
+        /* 서브메뉴가있는 1단계메뉴들은 display인라인으로는 안된다 */
+        font-size: 15.75px;
+        line-height: 76px;
+        padding-left: 30px;
+        font-weight: bold;
+        transition: all 0.5s;
+        position: static;
+    }
+
+    .logoNav .nav .depth1>li:last-child {
+        padding-right: 10px;
+    }
+
+}
+
+/* media only screen and max-width:디바이스 최대넓이 -1 반응형의 기본 문법 */
+@media only screen and (max-width:992px) {
+    .logoNav {
+        /* position: relative; */
+        height: auto;
+        /* 지정해줫던 높이값을 auto 값으로 풀어줘야지 nav클래스의 overflow 된 항목들까지 품을수 있다 */
+    }
+
+    .logoNav h1 {
+        color: #ffae3d;
+        font-size: 26.25px;
+        line-height: 76px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 60px;
+    }
+
+    .logoNav .nav {
+        position: static;
+        /* 포지션스태틱은 엡솔루트값을 취소시키는값 */
+        top: 0;
+        right: 0;
+        text-align: center;
+    }
+
+    .logoNav .nav .depth1>li {
+        /* float: left; */
+        display: inline-block;
+        /* 서브메뉴가있는 1단계메뉴들은 display인라인으로는 안된다 */
+        font-size: 15.75px;
+        line-height: 76px;
+        padding-left: 30px;
+        font-weight: bold;
+        transition: all 0.5s;
+        position: relative;
+        /* padding-bottom: 40px; */
+        line-height: 70px;
+    }
+
+    .logoNav .nav .depth2 {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        /* 탑100 레프트0 서브메뉴들을 바로밑으로 */
+        width: 168px;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0px 0px 15px #ddd;
+        /* 4방향에 그림자를 줄때는 방향수치는0으로고정하고 블러값을 주어서 그림자효과를준다 */
+        display: none;
+    }
+}
