@@ -148,6 +148,14 @@
     right: 0;
 }
 
+.logoNav .open_nav {
+    display: none;
+}
+
+.logoNav .close_nav {
+    display:none;
+}
+
 .logoNav .nav .depth1>li {
     /* float: left; */
     display: inline-block;

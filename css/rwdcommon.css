@@ -52,13 +52,20 @@
             /* 반응형기준으로 여백을 맞출려면 line-height는 이제 안쓰고 패딩으로 값을 맞추는 게 좋다 */
         }
         .logoNav .nav {
-        position: fixed;
-        /* 포지션스태틱은 엡솔루트값을 취소시키는값 */
-        top: 0;
-        right: 0;
-        text-align: center;
         display: none;
         }
+
+        .logoNav .open_nav {
+            display: none;
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform:
+            translatey(-50%);
+            font-size: 25px;
+        }
+
+        
         .topmenu .login {
             position: absolute;
             top: 0;
@@ -66,12 +73,22 @@
             color: #000;
             display: none;
         }
+
         .topmenu .sns .search_box {
         position: absolute;
-        top: 0px;
-        right: 10px;
-        transform: translate(0%);
-        border: none;
+            top: 0px;
+            right: 10px;
+            transform: translate(0%);
+            border: none;
         }
-
+        
+        .logoNav .close_nav {
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform:
+            translatey(-50%);
+            font-size: 25px;
+        }
     }
