@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+
+
+@media only screen and (max-width:1170px) {
+    .row {
+        padding: 0 10px;
+    }
+
+    .topmenu .login {
+        position: absolute;
+        top: 0;
+        right: 15px;
+        color: #000;
+    }
+    /* 앱솔루트가들어가면 패딩값이 소용이없다 */
+}
+
+/* media only screen and max-width:디바이스 최대넓이 -1 반응형의 기본 문법 */
+@media only screen and (max-width:992px) {
+    .logoNav {
+        /* position: relative; */
+        height: auto;
+        /* 지정해줫던 높이값을 auto 값으로 풀어줘야지 nav클래스의 overflow 된 항목들까지 품을수 있다 */
+    }
+
+    .logoNav h1 {
+        color: #ffae3d;
+        font-size: 26.25px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 1;
+        padding: 24.875px 0 0px;
+        /* 반응형기준으로 여백을 맞출려면 line-height는 이제 안쓰고 패딩으로 값을 맞추는 게 좋다 */
+    }
+
+    .logoNav .nav {
+        position: static;
+        /* 포지션스태틱은 엡솔루트값을 취소시키는값 */
+        top: 0;
+        right: 0;
+        text-align: center;
+    }
+}
+    @media only screen and (max-width:841px) {
+        .logoNav h1 {
+            color: #ffae3d;
+            font-size: 26.25px;
+            font-weight: bold;
+            text-align: center;
+            padding: 30px 0;
+            /* 반응형기준으로 여백을 맞출려면 line-height는 이제 안쓰고 패딩으로 값을 맞추는 게 좋다 */
+        }
+        .logoNav .nav {
+        position: fixed;
+        /* 포지션스태틱은 엡솔루트값을 취소시키는값 */
+        top: 0;
+        right: 0;
+        text-align: center;
+        display: none;
+        }
+        .topmenu .login {
+            position: absolute;
+            top: 0;
+            right: 15px;
+            color: #000;
+            display: none;
+        }
+        .topmenu .sns .search_box {
+        position: absolute;
+        top: 0px;
+        right: 10px;
+        transform: translate(0%);
+        border: none;
+        }
+
+    }
