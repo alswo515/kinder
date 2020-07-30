@@ -80,6 +80,36 @@
     vertical-align: top;
 }
 
+.join_form .info_content select{
+    -webkit-appearance: none;
+    background: transparent;
+    position: relative;
+    z-index: 999;
+    /* 포지션속성을 주면 밑에있는 after값을 밑으로 잡아먹기 떄문에 zindex 값을 줘서 after값을 위로 올려준다 */
+}
+
+.join_form .info_content .email_box {
+    position: relative;
+}
+
+.join_form .info_content .email_box:after {
+    content: '\f0dd';
+    font-family: 'font awesome 5 free';
+    font-weight: 900;
+    color: #f00;
+    /* vertical-align: middle; */
+    display: inline-block;
+    transform: translate(-30px,-4.5px);
+    /* line-height: 20px; */
+}
+
+
+.join_form .info_content select::-ms-expand{
+    display: none;
+}
+
+
+
 .join_form .info_content span {
     line-height: 45px;
 }
@@ -97,11 +127,52 @@
     background: #ddd;
 }
 
-.join_form .gender_area label,
+.join_form .gender_area label{
+    line-height: 45px;
+    padding: 0 15px 0 0;
+}
+
+.join_form .gender_area label:before{
+    content: '\f058';
+    font-family: "font awesome 5 free";
+    font-weight: 900;
+}
+
+.join_form .gender_area input[type=roadio]:checked[type=] label:before{
+    color: red;
+}
+
 .join_form .hobby_area label{
     line-height: 45px;
     padding: 0 15px 0 0;
 }
+
+.join_form .hobby_area label:before{
+    content: '\f0c8';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 400;
+    color: #ddd;
+    padding-right: 8px;
+    display: inline-block;
+    transform: scale(1.5);
+}
+.join_form .hobby_area input[type=checkbox]:checked + label:before{
+    content: '\f14a';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: red;
+    padding-right: 8px;
+}
+
+
+.join_form .gender_area input[type=radio]{
+    display: none;
+}
+
+.join_form .hobby_area input[type=checkbox]{
+    display: none;
+}
+
 
 .join_form .info_content textarea{
     width: 70%;
