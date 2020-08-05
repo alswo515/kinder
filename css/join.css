@@ -132,15 +132,6 @@
     padding: 0 15px 0 0;
 }
 
-.join_form .gender_area label:before{
-    content: '\f058';
-    font-family: "font awesome 5 free";
-    font-weight: 900;
-}
-
-.join_form .gender_area input[type=roadio]:checked[type=] label:before{
-    color: red;
-}
 
 .join_form .hobby_area label{
     line-height: 45px;
@@ -148,21 +139,26 @@
 }
 
 .join_form .hobby_area label:before{
-    content: '\f0c8';
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 400;
-    color: #ddd;
-    padding-right: 8px;
+    content: '';
     display: inline-block;
-    transform: scale(1.5);
+    padding: 0 15px 0 0;
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/sprite_img.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: -296px -114px;
 }
-.join_form .hobby_area input[type=checkbox]:checked + label:before{
+
+/* .join_form .hobby_area input[type=checkbox]:checked + label:before{
     content: '\f14a';
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
     color: red;
     padding-right: 8px;
-}
+} */
+
+
 
 
 .join_form .gender_area input[type=radio]{
