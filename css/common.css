@@ -153,7 +153,7 @@
 }
 
 .logoNav .close_nav {
-    display:none;
+    display: none;
 }
 
 .logoNav .nav .depth1>li {
@@ -167,7 +167,7 @@
 
 }
 
-.logoNav .nav .depth1 > li > a {
+.logoNav .nav .depth1>li>a {
     padding: 27.875px 0 23.875px 30px;
     display: inline-block;
     /* 반응형 유지보수를 위해서 li 태그가아닌 a태그로 선택자를돌려준다 */
@@ -221,10 +221,11 @@
     border-right: 10px solid transparent;
 }
 
-.logoNav .nav .depth1>li:hover .depth2 {
+/* .logoNav .nav .depth1>li:hover .depth2 {
     display: block;
-    /* 디스플레이 블락은 디스플레이 논으로 설정되있는것들을 보이게한다 */
-}
+} */
+
+/* 디스플레이 블락은 디스플레이 논으로 설정되있는것들을 보이게한다 */
 
 
 .logoNav .nav .depth2>li {
@@ -305,6 +306,3 @@
 
 
 /* 여기까지가 푸터 */
-
-
-
