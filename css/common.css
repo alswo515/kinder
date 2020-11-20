@@ -1,6 +1,4 @@
 @charset "utf-8";
-@import "reset.css";
-@import "rwdcommon.css";
 
 .row {
     max-width: 1167px;
@@ -16,19 +14,16 @@
     height: 1px;
     overflow: hidden;
     position: absolute;
-    top: -100px;
+    top: -100px
 }
 
 .skip a:focus {
-    /* focus는 tab키를 눌러야지 반응을한다 */
     width: 100%;
     height: auto;
     padding: 10px 0px;
-    /* position: static; */
-    /* 포지션속성을 취소한다 */
     position: fixed;
-    top: 0;
-    z-index: 999999;
+    top: 0px;
+    z-index: 9999999;
 }
 
 #header {
@@ -36,15 +31,10 @@
     width: 100%;
     top: 0;
     left: 0;
+    z-index: 999999;
     background: #fff;
-    z-index: 9999;
-    box-shadow: 0px 2px 2px #eee;
+    box-shadow: 0px 3px 3px #eee
 }
-
-/* 반응형의 기본은 max-width로 넓이를 먼저 잡아주고시작한다 이제부터 넓이를 잡을때는 max-width 안에있는 박스들은 전부다 %로 넓이를 지정한다 */
-
-
-
 
 .topmenu .row {
     position: relative
@@ -65,11 +55,6 @@
     color: rgb(255, 255, 255, 1)
 }
 
-.topmenu .sns {
-    /* position: relative; */
-}
-
-
 .topmenu .sns a {
     padding-right: 10px;
     font-size: 12.2px;
@@ -79,52 +64,73 @@
     font-size: 11px
 }
 
-.topmenu .sns .search_box {
+.topmenu .search {
     position: absolute;
-    top: 0px;
+    top: 0;
     right: 50%;
-    transform: translate(50%);
-    border: none;
+    transform: translate(50%)
 }
 
-.topmenu .sns .search_box fieldset {
-    border-bottom: 2px solid #fff;
+.topmenu .search fieldset {
+    border: 2px solid #fff;
+    border-radius: 3px;
     height: 25px;
 }
 
-.topmenu .search_box ::placeholder {
-    color: #fff;
-    text-align: center;
-}
-
-.topmenu .sns .search_box fieldset input {
+.topmenu .search input {
     border: none;
-    padding-left: 2px;
     background: none;
     color: #fff;
+    padding-left: 0.5em;
     outline: none;
+    width: 200px
 }
 
-.topmenu .sns .search_box fieldset button {
-    background: none;
-    color: #fff;
+.topmenu .search ::placeholder {
+    color: #fff
+}
+
+.topmenu .search button {
+    background: #fff;
+    color: #000;
     border: none;
     height: 21px;
+    padding: 0px 5px;
     vertical-align: top;
-    padding: 0px 0px;
-    float: right;
+    font-size: 11px;
+    float: right
 }
-
-
 
 .topmenu .login {
     position: absolute;
     top: 0;
     right: 0;
     color: #000;
+    display: none
+}
+
+.topmenu .login.on {
+    display: block
 }
 
 .topmenu .login a {
+    padding-left: 10px;
+    font-size: 11px
+}
+
+.topmenu .logout {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #000;
+    display: none
+}
+
+.topmenu .logout.on {
+    display: block
+}
+
+.topmenu .logout a {
     padding-left: 10px;
     font-size: 11px
 }
@@ -137,9 +143,21 @@
 .logoNav h1 {
     color: #ffae3d;
     font-size: 26.25px;
+    padding: 25.875px 0px 23.875px;
     font-weight: bold;
-    padding: 24.875px 0 24px;
     line-height: 15.75px;
+}
+
+.mobile_searchBtn {
+    display: none
+}
+
+.logoNav .open_nav {
+    display: none
+}
+
+.logoNav .close_nav {
+    display: none
 }
 
 .logoNav .nav {
@@ -148,33 +166,20 @@
     right: 0;
 }
 
-.logoNav .open_nav {
-    display: none;
-}
-
-.logoNav .close_nav {
-    display: none;
-}
-
 .logoNav .nav .depth1>li {
-    /* float: left; */
     display: inline-block;
-    /* 서브메뉴가있는 1단계메뉴들은 display인라인으로는 안된다 */
     font-size: 15.75px;
-    font-weight: bold;
-    transition: all 0.5s;
     position: relative;
-
+    font-weight: bold;
+    transition: all 0.5s
 }
 
 .logoNav .nav .depth1>li>a {
-    padding: 27.875px 0 23.875px 30px;
+    padding: 27.5px 0px 27.5px 30px;
     display: inline-block;
-    /* 반응형 유지보수를 위해서 li 태그가아닌 a태그로 선택자를돌려준다 */
 }
 
-
-.logoNav .nav .depth1>li:hover {
+.logoNav .nav .depth1>li.on {
     color: #ffd23c;
 }
 
@@ -195,63 +200,80 @@
     visibility: hidden;
 }
 
-
-
-.logoNav .nav .depth2 {
+.logoNav .depth1>li:nth-child(1) .depth2,
+.logoNav .depth1>li:nth-child(2) .depth2,
+.logoNav .depth1>li:nth-child(3) .depth2,
+.logoNav .depth1>li:nth-child(4) .depth2,
+.logoNav .depth1>li:nth-child(5) .depth2 {
     position: absolute;
     top: 85%;
     left: 0;
-    /* 탑100 레프트0 서브메뉴들을 바로밑으로 */
     width: 168px;
     background: #fff;
     border-radius: 5px;
+    padding: 0 15px;
     box-shadow: 0px 0px 15px #ddd;
-    /* 4방향에 그림자를 줄때는 방향수치는0으로고정하고 블러값을 주어서 그림자효과를준다 */
-    display: none;
+    display: none
 }
 
-.logoNav .nav .depth2:before {
+.logoNav .depth1>li:nth-child(6) .depth2 {
+    position: absolute;
+    top: 85%;
+    right: 0;
+    width: 140px;
+    background: #fff;
+    border-radius: 5px;
+    padding: 0 15px;
+    box-shadow: 0px 0px 15px #ddd;
+    display: none
+}
+
+.logoNav .depth1>li:nth-child(1) .depth2:before,
+.logoNav .depth1>li:nth-child(2) .depth2:before,
+.logoNav .depth1>li:nth-child(3) .depth2:before,
+.logoNav .depth1>li:nth-child(4) .depth2:before,
+.logoNav .depth1>li:nth-child(5) .depth2:before {
     content: '';
     position: absolute;
-    bottom: 99%;
+    bottom: 100%;
     left: 40px;
-    border-bottom: 100%;
     border-bottom: 10px solid #fff;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
 }
 
-/* .logoNav .nav .depth1>li:hover .depth2 {
-    display: block;
-} */
-
-/* 디스플레이 블락은 디스플레이 논으로 설정되있는것들을 보이게한다 */
-
-
-.logoNav .nav .depth2>li {
-    line-height: 38px;
-    color: #ffae3d;
-    padding: 0 15px;
-    font-size: 16px;
+.logoNav .depth1>li:nth-child(6) .depth2:before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    right: 40px;
+    border-bottom: 10px solid #fff;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
 }
 
 
-/* 여기까지가 헤드 */
+/* .logoNav .depth1 > li:hover .depth2 { display:block }     */
+.logoNav .depth2>li {
+    line-height: 38px;
+    font-size: 16px;
+    color: #ffae3d
+}
 
 
 #footer {
     text-align: center;
-    font-size: 12.25px;
+    font-size: 12.25px
 }
 
 .footerMenu {
     background: #eee;
     color: #333;
-    padding: 10px 0;
+    padding: 10px
 }
 
 .footerMenu a {
-    padding-left: 10px;
+    padding-left: 11px;
 }
 
 .footerMenu a:before {
@@ -259,13 +281,11 @@
     padding-right: 11px;
     font-size: 6px;
     position: relative;
-    /* 포지션렐러티브는 기준이 필요없는속성이다 기존에 있는 자신의 위치에서 움직이는 속성값이다 */
-    top: -1px
+    top: -1px;
 }
 
 .footerMenu a:first-child:before {
-    /* 퍼스트차일드와 비포의 순서는 영향을 받으므로 생각하면서 써야한다 */
-    display: none;
+    display: none
 }
 
 .comInfo {
@@ -275,34 +295,65 @@
 }
 
 .comInfo .sns a {
-    display: inline-block;
     font-size: 17px;
-    padding: 0 10px 10px;
+    padding: 0px 10px 10px;
+    display: inline-block;
 }
 
 .comInfo .info span {
     letter-spacing: -1px;
-    padding-left: 5px;
-    position: relative;
-    top: -1px;
+    padding-left: 5px
 }
 
 .comInfo .info span:before {
     content: '|';
-    padding-right: 6px;
+    padding-right: 7px;
     font-size: 6px;
+    position: relative;
+    top: -1px;
 }
 
-.comInfo .info span:first-child:before {
-    display: none;
+.comInfo .info span:nth-child(1):before {
+    display: none
 }
 
 .copyright {
     background: #0a0a0a;
-    padding: 10px 0px;
     font-size: 10.5px;
+    padding: 10px 0px;
     color: #333;
 }
 
+.frmLink {
+    margin-bottom: 10px
+}
 
-/* 여기까지가 푸터 */
+.siteLink {
+    display: inline-block;
+    vertical-align: top
+}
+
+.siteLink select {
+    padding-left: 10px;
+    font-size: 12px;
+    color: #000;
+    box-sizing: border-box;
+    width: 270px;
+    height: 36px;
+    border: solid 1px #c3c3c3;
+    background-color: #fff;
+    margin-right: 10px;
+}
+
+.frmLink a {
+    vertical-align: top;
+    display: inline-block;
+    font-size: 14px;
+    color: #fff;
+    box-sizing: border-box;
+    width: 60px;
+    height: 36px;
+    background-color: #484848;
+    text-align: center;
+    line-height: 36px;
+}

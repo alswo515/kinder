@@ -1,3 +1,3 @@
-# kinder
- 
- https://alswo515.github.io/kinder/
+# kinder_load
+
+https://oktobat.github.io/kinder_load/

@@ -1,223 +1,67 @@
 @charset "utf-8";
-@import "reset.css";
-@import "common.css";
-@import "rwdcommon.css";
+.join_after { display:none }
+.join_after.on { display:block }
+::placeholder { color:pink }
+#join_page { padding:217px 0 100px }
+#join_page h2 { text-align:center; font-size:30px;
+    padding-bottom:30px }
+.join_form .info_pilsoo { padding-left:20px; padding-bottom:10px; border-bottom:2px solid #000; font-size:15px; color:#f00; }    
+.join_form .pilsoo_item { position:relative }
+.join_form .pilsoo_item:before {content:"*"; position:absolute; left:5px; top:3px; width:15px; font-weight:bold; font-size:17px; color:#f00; }    
 
-
-
-#join_Page {
-    padding: 217px 0 100px;
-}
-
-#join_Page h2 {
-    padding-bottom: 30px;
-    text-align: center;
-    font-size: 30px;
-}
-
-::placeholder{
-    color: #f00;
-}
-
-.join_form .info_pilsoo {
-    padding: 0 0 10px 20px;
-    border-bottom: 2px solid #000;
-    font-size: 15px;
-    color: #f00;
-}
-
-
-.join_form .pilsoo_item::before {
-    content: "*";
-    position: absolute;
-    left: 5px;
-    top: 3px;
-    width: 15px;
-    font-weight: bold;
-    font-size: 17px;
-    color: #f00;
-}
-
-.join_form .info_list {
-    padding: 10px 0;
-    border-bottom: 1px solid #ccc;
-}
-
-
-.join_form .pilsoo_item {
-    position: relative;
-}
-
-.join_form .info_list li {
-    padding: 8px 0;
-}
-
-.join_form .tit_lbl {
-    display: inline-block;
-    width: 20%;
-    line-height: 45px;
-    font-size: 17px;
-    padding-left: 20px;
-    font-weight: bold;
-    letter-spacing: -2px;
-}
-
-
-.join_form .info_content {
-    display: inline-block;
-    /* background: red; */
-    width: 79%;
-    vertical-align: top;
-}
-
-.join_form .info_content select,
-.join_form .info_content input[type=date],
+.join_form .info_list {padding:10px 0; border-bottom:1px solid #ccc;}
+.join_form .info_list li {padding:8px 0}
+.join_form .tit_lbl { display:inline-block; width:20%; line-height:45px; font-weight:bold; font-size:17px; letter-spacing: -2px; padding-left:20px;  }
+.join_form .info_content { display:inline-block; width:79%; vertical-align:top }
 .join_form .info_content input[type=text],
-.join_form .info_content input[type=password] {
-    height: 45px;
-    border: 1px solid #ccc;
-    padding: 0 1em;
-    vertical-align: top;
+.join_form .info_content input[type=password],
+.join_form .info_content input[type=date],
+.join_form .info_content select { height:45px; border: 1px solid #ccc; padding:0 1em; vertical-align:top;  }
+.join_form .w320 { width:320px }
+.join_form .w160 { width:160px }
+.join_form .info_content span { line-height:45px; }
+.join_form .w70p { width:70% }
+.join_form .mb3 { margin:0px 0 5px}
+.join_form .info_content button { height:45px; width:80px; border:1px solid #ccc; border-radius:5px }
+.join_form .info_content button:hover { cursor:pointer; background:#ddd }
+.join_form .gender_area label,
+.join_form .hobby_area label
+{ line-height:45px; padding-right:15px  }
+.join_form .info_content textarea {
+    height: 245px; width:70%;
+    border:1px solid #ccc; 
+    /* textarea는 글꼴 관련 스타일을 상위태그에서 상속받지 못함 */
+    font-size: 15px; letter-spacing: -1px;
+    color: #444; padding: 10px; line-height: 1.5;
+    resize:none; }
+.join_form .btn { margin-top:20px; text-align:center }    
+.join_form .btn input { width:80px; height:40px; 
+    background:#000; color:#fff; 
+    border:none; border-radius:5px; 
+    font-size:18px; margin:0 20px }
+.join_form .btn input[type=submit] {
+    background:red }
+
+
+
+@media screen and (max-width:767px) {
+    .join_form .tit_lbl { display:block; width:100%; line-height:45px; font-weight:bold; font-size:17px; letter-spacing: -2px; padding-left:20px;  }
+    .join_form .info_content { display:block; width:100%; }
+
+    .join_form .w320 { width:90% }
+    .join_form .w160 { width:90% }
+    .join_form #addr_lbl { width:160px }
+    .join_form .w70p { width:90% }
+    .join_form  #addr1 ~ span { display:none }
+    .join_form .info_content textarea {
+        height: 245px; width:90%;
+        border:1px solid #ccc; 
+        /* textarea는 글꼴 관련 스타일을 상위태그에서 상속받지 못함 */
+        font-size: 15px; letter-spacing: -1px;
+        color: #444; padding: 10px; line-height: 1.5;
+        resize:none; }
+    .join_form #email_lbl + span { display:block }
+    .join_form .gender_area,
+    .join_form .hobby_area { padding-left:20px }
+
 }
-
-.join_form .info_content select{
-    -webkit-appearance: none;
-    background: transparent;
-    position: relative;
-    z-index: 999;
-    /* 포지션속성을 주면 밑에있는 after값을 밑으로 잡아먹기 떄문에 zindex 값을 줘서 after값을 위로 올려준다 */
-}
-
-.join_form .info_content .email_box {
-    position: relative;
-}
-
-.join_form .info_content .email_box:after {
-    content: '\f0dd';
-    font-family: 'font awesome 5 free';
-    font-weight: 900;
-    color: #f00;
-    /* vertical-align: middle; */
-    display: inline-block;
-    transform: translate(-30px,-4.5px);
-    /* line-height: 20px; */
-}
-
-
-.join_form .info_content select::-ms-expand{
-    display: none;
-}
-
-
-
-.join_form .info_content span {
-    line-height: 45px;
-}
-
-.join_form .info_content button {
-    height: 45px;
-    width: 80px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.join_form .info_content button:hover {
-    cursor:pointer;
-    /* 커서모양바꾸는 css속성 */
-    background: #ddd;
-}
-
-.join_form .gender_area label{
-    line-height: 45px;
-    padding: 0 15px 0 0;
-}
-
-
-.join_form .hobby_area label{
-    line-height: 45px;
-    padding: 0 15px 0 0;
-}
-
-.join_form .hobby_area label:before{
-    content: '';
-    display: inline-block;
-    padding: 0 15px 0 0;
-    width: 20px;
-    height: 20px;
-    background-image: url(../images/sprite_img.png);
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: -296px -114px;
-}
-
-/* .join_form .hobby_area input[type=checkbox]:checked + label:before{
-    content: '\f14a';
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    color: red;
-    padding-right: 8px;
-} */
-
-
-
-
-.join_form .gender_area input[type=radio]{
-    display: none;
-}
-
-.join_form .hobby_area input[type=checkbox]{
-    display: none;
-}
-
-
-.join_form .info_content textarea{
-    width: 70%;
-    height: 245px;
-    font-size: 15px;
-    letter-spacing: -1px;
-    color: #444;
-    padding: 10px;
-    line-height: 1.5;
-    resize: none;
-    /* 텍스트에어리어는 사용자가 마음대로 크기를 조절할수있기 때문에 resize속성을 넣어서 못하게 할수있다  */
-}
-
-.join_form .btn{
-    margin-top: 20px;
-    text-align: center;
-}
-.join_form .btn input{
-    width: 80px;
-    height: 40px;
-    background: #000;
-    color: #fff;
-    border:none;
-    border-radius:5px;
-    margin: 0 20px;
-}
-
-.join_form .btn input[type=submit]{
-    background: red;
-}
-
-
-.join_form .w70p{
-    width: 70%;
-}
-.join_form .mb3 {
-    margin-bottom:5px;
-}
-
-
-.join_form .w320 {
-    width: 320px;
-}
-
-.join_form .w160 {
-    width: 160px;
-}
-
-.join_form .w80 {
-    width: 80px;
-}
-
